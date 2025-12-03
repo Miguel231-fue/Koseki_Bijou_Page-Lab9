@@ -125,7 +125,7 @@ main {
 
 footer {
     background-color: var(--gris-oscuro);
-    color: var(--biboo-azul-claro);
+    color: var(--azul-claro);
     text-align: center;
     padding: 20px;
     border-top: 2px solid var(--azul);

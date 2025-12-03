@@ -1,4 +1,3 @@
-// --- EFECTO DE FLOTACIÓN EN CONTENEDORES ---
 const contenedores = document.querySelectorAll('.animado');
 contenedores.forEach((div, i) => {
     setTimeout(() => {
@@ -6,7 +5,6 @@ contenedores.forEach((div, i) => {
     }, i * 400);
 });
 
-// --- DESTELLOS CRISTALINOS ---
 
 const sparkContainer = document.getElementById("spark-container");
 
@@ -14,11 +12,9 @@ function crearDestello() {
     const spark = document.createElement("div");
     spark.classList.add("spark");
 
-    // Ubicación aleatoria
     spark.style.left = Math.random() * 100 + "%";
     spark.style.top = Math.random() * 100 + "%";
 
-    // Animación
     spark.style.animation = "sparkle 1.8s ease-out forwards";
 
     sparkContainer.appendChild(spark);
@@ -28,7 +24,6 @@ function crearDestello() {
 
 setInterval(crearDestello, 300);
 
-// Animación del destello
 const styleAnim = document.createElement("style");
 styleAnim.textContent = `
 @keyframes sparkle {
@@ -39,7 +34,6 @@ styleAnim.textContent = `
 document.head.appendChild(styleAnim);
 
 
-// --- BRILLO PULSANTE DEL TÍTULO ---
 const titulo = document.querySelector(".titulo-brillante");
 
 setInterval(() => {
@@ -50,14 +44,12 @@ setInterval(() => {
 }, 2200);
 
 
-// --- ANIMACIÓN FLOTANTE PARA LA BIBOO DE CUERPO COMPLETO ---
 const fullBody = document.querySelector(".full-body-biboo");
 
 if (fullBody) {
     fullBody.style.animation = "floatBiboo 4s ease-in-out infinite";
 }
 
-// Insertamos la animación en el documento
 const estiloBiboo = document.createElement("style");
 estiloBiboo.textContent = `
 @keyframes floatBiboo {
