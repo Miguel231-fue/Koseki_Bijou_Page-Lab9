@@ -1,0 +1,133 @@
+:root {
+    --azul: #6EC8FF;
+    --azul-claro: #9BE7FF;
+    --blanco: #F7FBFF;
+    --gris-oscuro: #1A1A1A;
+    --brillo: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #dff4ff, #f8fcff);
+    overflow-x: hidden;
+}
+
+.full-body-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.95;
+    transform: translateY(40px);
+}
+
+.full-body-biboo {
+    height: 100vh;
+    filter: drop-shadow(0 0 12px rgba(110,200,255,0.4));
+}
+
+main, header, nav, footer {
+    margin-left: 280px;
+}
+
+header {
+    background: linear-gradient(90deg, var(--azul), var(--azul-claro));
+    padding: 28px;
+    text-align: center;
+    border-bottom: 3px solid #b9eeff;
+    z-index: 2;
+}
+
+.titulo-brillante {
+    text-shadow: 0 0 12px var(--azul-claro), 0 0 20px white;
+    letter-spacing: 1.5px;
+}
+
+nav {
+    background-color: var(--gris-oscuro);
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--azul-claro);
+    margin: 0 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 14px var(--azul);
+}
+
+main {
+    padding: 40px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.contenedor {
+    width: 360px;
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid var(--azul-claro);
+    box-shadow: 0 6px 15px rgba(110, 200, 255, 0.35);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.contenedor:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(110, 200, 255, 0.5);
+}
+
+.contenedor img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.float {
+    animation: flotar 3.5s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#spark-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.spark {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--azul-claro);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px var(--azul);
+}
+
+footer {
+    background-color: var(--gris-oscuro);
+    color: var(--biboo-azul-claro);
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--azul);
+    z-index: 2;
+}
